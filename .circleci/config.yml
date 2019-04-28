@@ -4,12 +4,24 @@ version: 2.1
 # Use a package of configuration called an orb, see https://circleci.com/docs/2.0/orb-intro/
 orbs:
   # Declare a dependency on the welcome-orb
-  welcome: circleci/welcome-orb@0.3.1
+  my-orb:
+    orbs:
+      codecov: codecov/codecov@1.0.4
+    executors:
+      specialthingexecutor:
+        docker:
+          - image: circleci/ruby:1.4.2
+    jobs:
+      myjob:
+        executor: specialthingexecutor
+        steps:
+          - codecov/upload:
+            path: ~/tmp/results.xml
+       
 
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
 workflows:
-  # Name the workflow "Welcome"
-  Welcome:
-    # Run the welcome/run job in its own container
+  main:
     jobs:
-      - welcome/run
+      - my-orb/myjob
+
