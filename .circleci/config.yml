@@ -20,14 +20,6 @@ orbs:
 
                 active_scanners: all
 
-                enforced_scanners:
-                  - RepoNotEmpty
-                  - Brakeman
-                  - BundleAudit
-                  - Gosec
-                  - NPMAudit
-                  - YarnAudit
-                  - PatternSearch
                 reports:
                   - uri: file://salus-report.json
                     format: json" | tee ./salus.yaml 
