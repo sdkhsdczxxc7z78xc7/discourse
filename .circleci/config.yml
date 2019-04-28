@@ -41,14 +41,15 @@ orbs:
           - run: 
               name: run scan
               command: |
-                SALUS_CONFIGURATION="file://./a-salus.yaml" /usr/local/bundle/bin/bundle exec ./bin/salus scan
+                #SALUS_CONFIGURATION="file://./a-salus.yaml" /usr/local/bundle/bin/bundle exec ./bin/salus scan
+                /usr/local/bundle/bin/bundle exec ./bin/salus scan
           - run: pwd
           - run: ls -l
           - run: ls -l /home
           - run: ls -l bin
           - run: ls -l repo
-          #- store_artifacts:
-          #    path: ./salus-report.json
+          - store_artifacts:
+              path: ./test/salus-report.json
 
 
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
