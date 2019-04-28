@@ -23,7 +23,7 @@ orbs:
                 enforced_scanners: none
 
                 reports:
-                  - uri: file://salus-report.json
+                  - uri: file://test/salus-report.json
                     format: json" | tee ./a-salus.yaml 
           - run: cat ./a-salus.yaml
           - run: pwd
@@ -41,8 +41,7 @@ orbs:
           - run: 
               name: run scan
               command: |
-                #SALUS_CONFIGURATION="file://./a-salus.yaml" /usr/local/bundle/bin/bundle exec ./bin/salus scan
-                /usr/local/bundle/bin/bundle exec ./bin/salus scan
+                SALUS_CONFIGURATION="file://a-salus.yaml" /usr/local/bundle/bin/bundle exec ./bin/salus scan
           - run: pwd
           - run: ls -l
           - run: ls -l /home
