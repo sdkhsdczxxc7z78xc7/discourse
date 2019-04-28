@@ -8,21 +8,21 @@ def rails_master?
   ENV["RAILS_MASTER"] == '1'
 end
 
-if rails_master?
+#if rails_master?
   gem 'arel', git: 'https://github.com/rails/arel.git'
   gem 'rails', git: 'https://github.com/rails/rails.git'
-else
+#else
   # until rubygems gives us optional dependencies we are stuck with this
   # bundle update actionmailer actionpack actionview activemodel activerecord activesupport railties
-  gem 'actionmailer', '5.2.3'
-  gem 'actionpack', '5.2.3'
-  gem 'actionview', '5.2.3'
-  gem 'activemodel', '5.2.3'
-  gem 'activerecord', '5.2.3'
-  gem 'activesupport', '5.2.3'
-  gem 'railties', '5.2.3'
-  gem 'sprockets-rails'
-end
+#  gem 'actionmailer', '5.2.3'
+#  gem 'actionpack', '5.2.3'
+#  gem 'actionview', '5.2.3'
+#  gem 'activemodel', '5.2.3'
+#  gem 'activerecord', '5.2.3'
+#  gem 'activesupport', '5.2.3'
+#  gem 'railties', '5.2.3'
+#  gem 'sprockets-rails'
+#end
 
 gem 'seed-fu'
 
