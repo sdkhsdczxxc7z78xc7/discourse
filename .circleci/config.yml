@@ -37,6 +37,11 @@ orbs:
               name: run scan
               command: |
                   /usr/local/bundle/bin/bundle exec ./bin/salus scan --config file://salus.yaml
+          - run: pwd
+          - run: ls -l
+          - run: ls -l /home
+          - run: ls -l bin
+          - run: ls -l repo
           - store_artifacts:
               path: ./salus-report.json
 
