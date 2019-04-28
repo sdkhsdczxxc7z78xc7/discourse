@@ -15,7 +15,7 @@ orbs:
         working_directory: /home/repo
         steps:
           - checkout
-          - run: bundle exec ./bin/salus scan 
+          - run: bundle exec /home/bin/salus scan 
 
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
 workflows:
