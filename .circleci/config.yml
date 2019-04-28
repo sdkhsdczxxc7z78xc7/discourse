@@ -10,7 +10,7 @@ orbs:
     executors:
       specialthingexecutor:
         docker:
-          - image: circleci/ruby:1.4.2
+          - image: circleci/ruby:latest
     jobs:
       myjob:
         executor: specialthingexecutor
