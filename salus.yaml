@@ -31,5 +31,5 @@ active_scanners: all
 enforced_scanners: none
 
 reports:
-  - uri: file://repo/test/salus-report.json
+  - uri: file://test/salus-report.json
     format: json
