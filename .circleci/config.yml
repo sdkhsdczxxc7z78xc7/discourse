@@ -18,7 +18,7 @@ orbs:
               echo " 
                 config_version: 1
 
-                active_scanners: none
+                active_scanners: all
 
                 enforced_scanners: none
 
