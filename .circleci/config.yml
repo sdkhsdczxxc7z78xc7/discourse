@@ -14,6 +14,13 @@ orbs:
         executor: specialthingexecutor
         working_directory: /home
         steps:
+          - run: pwd
+          - run: ls -l
+          - run: ls -l /home
+          - run: ls -l bin
+          - run: ls -l repo
+          - checkout:
+              path: ./repo
           - run: |
               echo " 
                 config_version: 1
@@ -25,13 +32,6 @@ orbs:
                 reports:
                   - uri: file://test/salus-report.json
                     format: json" | tee ./repo/a-salus.yaml 
-          - run: pwd
-          - run: ls -l
-          - run: ls -l /home
-          - run: ls -l bin
-          - run: ls -l repo
-          - checkout:
-              path: ./repo
           - run: pwd
           - run: ls -l
           - run: ls -l /home
