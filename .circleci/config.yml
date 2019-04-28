@@ -30,7 +30,7 @@ orbs:
                   - PatternSearch
                 reports:
                   - uri: file://salus-report.json
-                    format: json" | tee /home/salus.yaml 
+                    format: json" | tee ./salus.yaml 
           - checkout:
               path: ./repo
           - run: 
@@ -38,7 +38,7 @@ orbs:
               command: |
                   /usr/local/bundle/bin/bundle exec ./bin/salus scan --config file://salus.yaml
           - store_artifacts:
-              path: /home/salus-report.json
+              path: ./salus-report.json
 
 
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
