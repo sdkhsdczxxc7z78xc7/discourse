@@ -24,13 +24,23 @@ orbs:
 
                 reports:
                   - uri: file://salus-report.json
-                    format: json" | tee ./salus.yaml 
+                    format: json" | tee ./a-salus.yaml 
+          - run: pwd
+          - run: ls -l
+          - run: ls -l /home
+          - run: ls -l bin
+          - run: ls -l repo
           - checkout:
               path: ./repo
+          - run: pwd
+          - run: ls -l
+          - run: ls -l /home
+          - run: ls -l bin
+          - run: ls -l repo
           - run: 
               name: run scan
               command: |
-                /usr/local/bundle/bin/bundle exec ./bin/salus scan --config file://salus.yaml
+                /usr/local/bundle/bin/bundle exec ./bin/salus scan --config file://./a-salus.yaml
           - run: pwd
           - run: ls -l
           - run: ls -l /home
