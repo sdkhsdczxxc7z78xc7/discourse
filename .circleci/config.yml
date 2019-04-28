@@ -14,16 +14,29 @@ orbs:
         executor: specialthingexecutor
         working_directory: /home
         steps:
-          - run: ls -l
           - checkout:
               path: ./repo
-          - run: ls -l
-          - run: ls -l /home/repo
-          - run: pwd
-          #- run: rm -rf /home/repo
-          #- run: ln -s /root/project /home/repo && /usr/local/bundle/bin/bundle exec ./bin/salus scan 
-          - run: /usr/local/bundle/bin/bundle exec ./bin/salus scan 
+          - run:
+              name: copy config
+              command: |
+                echo "# The default config file for Salus.
+config_version: 1
 
+active_scanners: all
+
+enforced_scanners:
+  - RepoNotEmpty
+  - Brakeman
+  - BundleAudit
+  - Gosec
+  - NPMAudit
+  - YarnAudit
+  - PatternSearch
+  
+reports:
+  uri: file://salus-report.json
+  format: json" >> /home/salus.yaml
+          - run: /usr/local/bundle/bin/bundle exec ./bin/salus scan  --config "file://salus.yaml"
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
 workflows:
   main:
