@@ -19,7 +19,7 @@ orbs:
           - run: ls -l /home/repo
           - run: pwd
           - run: rm -rf /home/repo
-          - run: ln -s /root/project /home/repo && /usr/local/bundle/bin/bundle /home/bin/salus scan 
+          - run: ln -s /root/project /home/repo && /usr/local/bundle/bin/bundle exec /home/bin/salus scan 
 
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
 workflows:
