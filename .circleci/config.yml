@@ -14,12 +14,15 @@ orbs:
         executor: specialthingexecutor
         working_directory: /home
         steps:
-          - checkout
+          - run: ls -l
+          - checkout:
+              path: ./repo
           - run: ls -l
           - run: ls -l /home/repo
           - run: pwd
-          - run: rm -rf /home/repo
-          - run: ln -s /root/project /home/repo && /usr/local/bundle/bin/bundle exec ./bin/salus scan 
+          #- run: rm -rf /home/repo
+          #- run: ln -s /root/project /home/repo && /usr/local/bundle/bin/bundle exec ./bin/salus scan 
+          - run: /usr/local/bundle/bin/bundle exec ./bin/salus scan 
 
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
 workflows:
