@@ -24,7 +24,7 @@ orbs:
 
                 reports:
                   - uri: file://test/salus-report.json
-                    format: json" | tee ./a-salus.yaml 
+                    format: json" | tee ./repo/a-salus.yaml 
           - run: cat ./a-salus.yaml
           - run: pwd
           - run: ls -l
