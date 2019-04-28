@@ -18,10 +18,9 @@ orbs:
               echo " 
                 config_version: 1
 
-                active_scanners: all
+                active_scanners: none
 
-                enforced_scanners:
-                  - BundleAudit
+                enforced_scanners: none
 
                 reports:
                   - uri: file://salus-report.json
@@ -42,7 +41,7 @@ orbs:
           - run: 
               name: run scan
               command: |
-                /usr/local/bundle/bin/bundle exec ./bin/salus scan --config "file://a-salus.yaml"
+                SALUS_CONFIGURATION="file://./a-salus.yaml" /usr/local/bundle/bin/bundle exec ./bin/salus scan
           - run: pwd
           - run: ls -l
           - run: ls -l /home
