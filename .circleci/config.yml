@@ -8,7 +8,7 @@ orbs:
     executors:
       specialthingexecutor:
         docker:
-          - image: coinbase/salus:04d7f9eab7c2a45ab2ab5ed20869ed3f358e5cb716ca77504601e064aa3e6494
+          - image: coinbase/salus:2.4.1
     jobs:
       myjob:
         executor: specialthingexecutor
