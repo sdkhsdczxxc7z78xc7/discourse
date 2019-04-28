@@ -13,7 +13,7 @@ orbs:
       myjob:
         executor: specialthingexecutor
         working_directory: /home/repo
-       steps:
+        steps:
           - checkout
           - run: bundle exec ./bin/salus scan 
 
