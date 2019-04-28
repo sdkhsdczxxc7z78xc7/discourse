@@ -16,10 +16,14 @@ orbs:
         steps:
           - checkout:
               path: ./repo
+          - run: 
+              name: run scan
+              command: |
+                  /usr/local/bundle/bin/bundle exec ./bin/salus scan --config file://salus.yaml
           - run:
               name: copy config
               command: |
-                echo "# The default config file for Salus.
+                  echo "
 config_version: 1
 
 active_scanners: all
@@ -36,11 +40,11 @@ enforced_scanners:
 reports:
   uri: file://salus-report.json
   format: json" >> /home/salus.yaml
-          - run: /usr/local/bundle/bin/bundle exec ./bin/salus scan  --config "file://salus.yaml"
+
+
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
 workflows:
   main:
     jobs:
       - my-orb/myjob
-
 
