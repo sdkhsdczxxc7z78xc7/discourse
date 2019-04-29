@@ -8,5 +8,6 @@ orbs:
 workflows:
   main:
     jobs:
-      - salustest/scan:
-          active_scanners: "\n    - Brakeman"
+      - salustest/scan
+#      - salustest/scan:
+#          active_scanners: "\n    - Brakeman"
