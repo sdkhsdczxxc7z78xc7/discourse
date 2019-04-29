@@ -2,14 +2,15 @@
 version: 2.1
 
 orbs:
-  salustest: jsresearch/salustest@dev:first
+  salus: fedreacy/salus@dev:0.0.1
 
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
 workflows:
   main:
     jobs:
-      - salustest/scan:
-          report_uri: "https://postb.in/G3onBUfO"
+      - salustest/scan
+#      - salustest/scan:
+#          report_uri: "https://postb.in/G3onBUfO"
 #      - salustest/scan:
 #          active_scanners: "\n    - Brakeman"
 
