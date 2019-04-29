@@ -9,4 +9,4 @@ workflows:
   main:
     jobs:
       - salustest/scan:
-          active_scanners: "\n- Brakeman"
+          active_scanners: "\n    - Brakeman"
