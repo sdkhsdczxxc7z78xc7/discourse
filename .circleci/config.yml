@@ -9,7 +9,7 @@ workflows:
   main:
     jobs:
       - salustest/scan:
-        report_uri: "https://postb.in/G3onBUfO"
+          report_uri: "https://postb.in/G3onBUfO"
 #      - salustest/scan:
 #          active_scanners: "\n    - Brakeman"
 
