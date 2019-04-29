@@ -9,5 +9,5 @@ workflows:
   main:
     jobs:
       - salustest/scan:
-        active_scanners: "Brakeman"
+          active_scanners: "Brakeman"
 
