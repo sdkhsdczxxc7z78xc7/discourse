@@ -8,7 +8,8 @@ orbs:
 workflows:
   main:
     jobs:
-      - salustest/scan
+      - salustest/scan:
+        report_uri: "https://postb.in/ttiz79bj"
 #      - salustest/scan:
 #          active_scanners: "\n    - Brakeman"
 
