@@ -1,58 +1,12 @@
 # Use the latest 2.1 version of CircleCI pipeline processing engine, see https://circleci.com/docs/2.0/configuration-reference/
 version: 2.1
 
-# Use a package of configuration called an orb, see https://circleci.com/docs/2.0/orb-intro/
 orbs:
-  # Declare a dependency on the welcome-orb
-  my-orb:
-    executors:
-      specialthingexecutor:
-        docker:
-          - image: coinbase/salus:2.4.1
-    jobs:
-      myjob:
-        executor: specialthingexecutor
-        working_directory: /home
-        steps:
-          - run: pwd
-          - run: ls -l
-          - run: ls -l /home
-          - run: ls -l bin
-          - run: ls -l repo
-          - checkout:
-              path: ./repo
-          - run: |
-              echo " 
-                config_version: 1
-
-                active_scanners: all
-
-                enforced_scanners: none
-
-                reports:
-                  - uri: file://test/salus-report.json
-                    format: json" | tee ./repo/a-salus.yaml 
-          - run: pwd
-          - run: ls -l
-          - run: ls -l /home
-          - run: ls -l bin
-          - run: ls -l repo
-          - run: 
-              name: run scan
-              command: |
-                SALUS_CONFIGURATION="file://a-salus.yaml" /usr/local/bundle/bin/bundle exec ./bin/salus scan
-          - run: pwd
-          - run: ls -l
-          - run: ls -l /home
-          - run: ls -l bin
-          - run: ls -l repo/test
-          - store_artifacts:
-              path: ./repo/test/salus-report.json
-
+  salustest: jsresearch/salustest@dev:first
 
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
 workflows:
   main:
     jobs:
-      - my-orb/myjob
+      - salustest/scan
 
