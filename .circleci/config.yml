@@ -15,8 +15,8 @@ workflows:
     jobs:
       - salus/scan:
           enforced_scanners: "none"
-#          salus_executor: 
-#            name: "salus_latest"
+          salus_executor: 
+            name: "salus_latest"
             #name: salus_latest
 #      - salustest/scan:
 #          report_uri: "https://postb.in/G3onBUfO"
