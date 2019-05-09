@@ -2,12 +2,12 @@
 version: 2.1
 
 orbs:
-  salus: federacy/salus@dev:0.0.2
+  salus: federacy/salus@dev:0.0.3
 
 executors:
   salus_latest:
     docker:
-      - image: coinbase/salus:2.4.0
+      - image: coinbase/salus:2.4.1
 
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
 workflows:
