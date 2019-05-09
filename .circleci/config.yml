@@ -7,7 +7,7 @@ orbs:
 executors:
   salus_latest:
     docker:
-      - image: coinbase/salus:latest
+      - image: coinbase/salus:2.4.0
 
 # Orchestrate or schedule a set of jobs, see https://circleci.com/docs/2.0/workflows/
 workflows:
