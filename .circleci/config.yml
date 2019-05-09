@@ -17,7 +17,7 @@ workflows:
           enforced_scanners: "none"
           salus_executor: 
             name: "salus_latest"
-          configuration_file: "salus-configuration-test.yml"
+          configuration_file: "/home/repo/salus-configuration-test.yml"
             #name: salus_latest
 #      - salustest/scan:
 #          report_uri: "https://postb.in/G3onBUfO"
