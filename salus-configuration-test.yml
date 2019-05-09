@@ -1,10 +1,10 @@
-  config_version: 1
+config_version: 1
 
-  active_scanners: all
+active_scanners: all
 
-  enforced_scanners: all
+enforced_scanners: all
 
-  reports:
-    - uri: file://../salus-report.json 
-      format: json
-      verbose: true
+reports:
+  - uri: file://../salus-report.json 
+    format: json
+    verbose: true
