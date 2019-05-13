@@ -14,7 +14,7 @@ workflows:
   main:
     jobs:
       - salus/scan:
-          enforced_scanners: "none"
+          enforced_scanners: "all"
           #configuration_file: "salus-configuration-test.yaml"
           #salus_executor: 
           #  name: "salus_latest"
@@ -22,7 +22,8 @@ workflows:
           #      - salustest/scan:
 #          report_uri: "https://postb.in/G3onBUfO"
 #      - salustest/scan:
-#          active_scanners: "\n    - Brakeman"
+          active_scanners: "\n    - Brakeman"
+
 
 
 
