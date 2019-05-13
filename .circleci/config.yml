@@ -18,7 +18,8 @@ workflows:
           #salus_executor: 
           #  name: "salus_latest"
             #name: salus_latest
-#      - salustest/scan:
+          configuration_file: "salus-configuration-test.yaml"
+          #      - salustest/scan:
 #          report_uri: "https://postb.in/G3onBUfO"
 #      - salustest/scan:
 #          active_scanners: "\n    - Brakeman"
