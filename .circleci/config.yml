@@ -2,7 +2,7 @@
 version: 2.1
 
 orbs:
-  salus: federacy/salus@dev:0.0.3
+  salus: federacy/salus@dev:0.0.4
 
 executors:
   salus_latest:
@@ -15,9 +15,9 @@ workflows:
     jobs:
       - salus/scan:
           enforced_scanners: "none"
-          salus_executor: 
-            name: "salus_latest"
-          configuration_file: "salus-configuration-test.yaml"
+          #salus_executor: 
+          #  name: "salus_latest"
+          #configuration_file: "salus-configuration-test.yaml"
             #name: salus_latest
 #      - salustest/scan:
 #          report_uri: "https://postb.in/G3onBUfO"
