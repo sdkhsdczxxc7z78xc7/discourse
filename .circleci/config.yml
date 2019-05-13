@@ -15,10 +15,10 @@ workflows:
     jobs:
       - salus/scan:
           enforced_scanners: "none"
+          configuration_file: "salus-configuration-test.yaml"
           #salus_executor: 
           #  name: "salus_latest"
             #name: salus_latest
-          configuration_file: "salus-configuration-test.yaml"
           #      - salustest/scan:
 #          report_uri: "https://postb.in/G3onBUfO"
 #      - salustest/scan:
