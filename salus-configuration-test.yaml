@@ -1,6 +1,6 @@
 config_version: 1
 
-active_scanners: "brakeman"
+active_scanners: all
 
 enforced_scanners: all
 
