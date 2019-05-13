@@ -1,8 +1,8 @@
 config_version: 1
 
-active_scanners: all
+active_scanners: Brakeman
 
-enforced_scanners: none
+enforced_scanners: all
 
 reports:
   - uri: file://../salus-report.json 
