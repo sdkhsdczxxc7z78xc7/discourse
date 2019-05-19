@@ -2,7 +2,7 @@
 version: 2.1
 
 orbs:
-  salus: federacy/salus@dev:0.0.4
+  salus: federacy/salus@dev:0.0.5
 
 executors:
   salus_latest:
