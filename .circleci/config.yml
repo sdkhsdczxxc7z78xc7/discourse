@@ -14,8 +14,8 @@ workflows:
   main:
     jobs:
       - salus/scan:
-          enforced_scanners: "all"
-          #configuration_file: "salus-configuration-test.yaml"
+          enforced_scanners: "none"
+          configuration_file: "salus-configuration-test.yaml"
           #salus_executor: 
           #  name: "salus_latest"
             #name: salus_latest
