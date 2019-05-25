@@ -20,7 +20,7 @@ workflows:
           #  name: "salus_latest"
             #name: salus_latest
           #      - salustest/scan:
-          report_uri: "https://testapi.federacy.com/collector/salus_scans/2
+          report_uri: "https://testapi.federacy.com/collector/salus_scans/2"
 #      - salustest/scan:
           active_scanners: "\n    - Brakeman"
 
