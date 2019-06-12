@@ -16,3 +16,4 @@ workflows:
       - salus/scan:
           enforced_scanners: "all"
           report_uri: "https://honeypot.federacy.com/collector/salus_scans/8bc3d6cf-ba71-4441-8295-68b5dd4cd995"
+
