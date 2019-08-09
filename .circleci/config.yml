@@ -2,7 +2,7 @@
 version: 2.1
 
 orbs:
-  salus: federacy/salus@2.5.1
+  salus: federacy/salus@dev:2.6.2
 
 executors:
   salus_2_4_2:
@@ -15,5 +15,5 @@ workflows:
     jobs:
       - salus/scan:
           enforced_scanners: "all"
-          report_uri: "https://honeypot.federacy.com/collector/salus_scans/a3ce28f2-320c-469e-9cc7-d8116e49f0c3"
+          report_uri: "https://honeypot.federacy.com/collector/salus_scans/6aa509f1-6766-4c2b-9feb-9c8fdc0c4cfc"
 
